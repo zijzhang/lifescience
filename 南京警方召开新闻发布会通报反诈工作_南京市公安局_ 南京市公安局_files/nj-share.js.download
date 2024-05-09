@@ -1,0 +1,12 @@
+if (typeof jQuery == 'undefined') {
+	var fileref=document.createElement('script');
+	fileref.setAttribute("type","text/javascript");
+	fileref.setAttribute("src", '/szfmaterial/JS/jquery-1.12.4.min.js');
+	document.getElementsByTagName("head")[0].appendChild(fileref);
+}
+var cssref = document.createElement('link');
+cssref.setAttribute("rel","stylesheet");
+cssref.setAttribute("type","text/css");
+cssref.setAttribute("href","/szfmaterial/CSS/nj-share.css");
+document.getElementsByTagName("head")[0].appendChild(cssref);
+document.write("<script type='text/javascript' charset='utf-8' src='/szfmaterial/JS/jquery.qrcode.min.js'></script><div class='nj-share'><span title='分享到微信' class='share-weixin'></span><span title='分享到QQ空间' class='share-qzone'></span><span title='分享到新浪微博' class='share-sina'></span></div><div class='share-wx-popub'><div class='share-wx-top'><span class='share-wx-title'>分享到 - 微信</span><div class='share-wx-close'>X</div></div><div class='share-wx-qrcode'></div></div><script>var doctitle,docpuburl,docdescription = '';if(document.getElementsByTagName('meta')['ArticleTitle']){doctitle = document.getElementsByTagName('meta')['ArticleTitle'].content;}else{doctitle=window.top.document.title}docpuburl = window.top.document.URL;if(document.getElementsByTagName('meta')['Description']){docdescription = document.getElementsByTagName('meta')['Description'].content;}jQuery('.share-wx-qrcode').qrcode({width:176,height:176,text:docpuburl});jQuery('.share-weixin').bind('click',function(){jQuery('.share-wx-popub').show();});jQuery('.share-wx-close').bind('click',function(){jQuery('.share-wx-popub').hide();});jQuery('.share-qzone').bind('click',function(){window.open('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+docpuburl+'&title='+doctitle+'&desc=&summary='+docdescription+'&pics=','newwindow','height=400,width=600,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')});jQuery('.share-sina').bind('click',function(){window.open('http://service.weibo.com/share/share.php?url='+docpuburl+'&title='+doctitle+'&pic=','newwindow','height=400,width=600,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')});</script>");

@@ -1,0 +1,15 @@
+jQuery.support.cors = true; 
+var type = "sitepv";
+jQuery.ajax({
+	type: "get",
+	data: {siteid:siteId,type:type},
+	traditional:true,
+	async:false,
+	url: "/ubas/getcounts",
+	dataType: "json",
+	success: function (data) {
+		$("#monitor_"+siteId).text(data["SITEPV"]);
+	},
+	error: function (XMLHttpRequest, textStatus, errorThrown) {
+	}
+});

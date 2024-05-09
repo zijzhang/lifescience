@@ -1,0 +1,20 @@
+(function($){
+	/**
+	*	bindKey13	绑定回车事件	version 1.0		creater ： omi
+	*	simple tab switch
+	*	example 
+	*	$(function(){
+	*		$('#PageNum').bindKey13('.PageNumOK');
+	*	}); 
+	*	@param 
+	*	@function	//	input selector
+	*	@btn		//	button selector
+	**/ 	  
+	$.fn.bindKey13 = function(btn) {
+		$(this).bind('keypress',function(event){
+	    	if(event.keyCode == "13"){
+	    		$(btn).click();
+	    	}
+  		});
+	};
+})(jQuery);
